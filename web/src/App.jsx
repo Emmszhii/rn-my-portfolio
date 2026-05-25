@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
 import Navbar from "./components/Navbar";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
@@ -11,15 +10,13 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <main className="container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/data" element={<Data />} />
-          <Route path="/game" element={<Game />} />
-        </Routes>
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/data" element={<Data />} />
+        <Route path="/game" element={<Game />} />
+      </Routes>
     </BrowserRouter>
   );
 }
